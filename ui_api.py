@@ -21,7 +21,7 @@ class UIAPI:
 
     def __init__(self, base_url: str, username: str, password: str, timeout: int = 15):
         """
-        base_url: например, http://45.82.254.48:80/secretpanel/panel
+        base_url: например, http://IP-server/secretpanel/panel
         """
         self.session = requests.Session()
         self.session.headers.update({
@@ -404,3 +404,4 @@ class UIAPI:
         if not (isinstance(res, dict) and res.get("success") is True):
             raise RuntimeError(f"updateClient failed: {res}")
         return True
+
