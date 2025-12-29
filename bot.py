@@ -46,10 +46,10 @@ SUPPORT_USERNAME = os.getenv("SUPPORT_USERNAME", "Maks640")
 MAIN_ADMIN_ID = _env_int("MAIN_ADMIN_ID", 919845440)
 
 # В проде — хранить в ENV
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8147552466:AAFDfTAGmdxwZdHtvKapuWR54wkT4SEu5bU")
-UI_BASE_URL = os.getenv("UI_BASE_URL", "http://45.82.254.48/secretpanel/panel") # реальный
-UI_USERNAME = os.getenv("UI_USERNAME", "admin_v2ray")
-UI_PASSWORD = os.getenv("UI_PASSWORD", "Hlpb0291")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "") # ваш токен ТГ-бота
+UI_BASE_URL = os.getenv("UI_BASE_URL", "") # ваш адрес сервера
+UI_USERNAME = os.getenv("UI_USERNAME", "") # ваш логин для входа в панель 3x-ui
+UI_PASSWORD = os.getenv("UI_PASSWORD", "") # ваш пароль для входа в панель 3x-ui
 
 UI = UIAPI(
     base_url=UI_BASE_URL,
@@ -968,3 +968,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
